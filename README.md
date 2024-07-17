@@ -25,10 +25,10 @@
    export the file as environmental variable<br/>
    export KUBECONFIG=filename.yaml<br/>
    Now connected to the cluster<br/>
-   <img src='./sp/kimage1.png' height="80%" width="80%" alt="Disk Sanitization Steps">
+   <img src='./im/kimg5.png' height="80%" width="80%" alt="Disk Sanitization Steps">
 
 
-   <img src='./sp/kimage2.png' height="80%" width="80%" alt="Disk Sanitization Steps">
+   <img src='./im/kimg4.png' height="80%" width="80%" alt="Disk Sanitization Steps">
 
   <h2>step2</h2>
   Deploy MongoDB statefulSet in the cluster using bundles of config files (Helm Chart)<br/>
