@@ -22,12 +22,10 @@
    Download the 'kubeconfig file' after creating the cluster<br/>
    change permissions of the file so that only the user can have read access to the file<br/>
    chmod 400 filename<br/>
+   <img src='./im/kimg5.png' height="80%" width="80%" alt="Disk Sanitization Steps">
    export the file as environmental variable<br/>
    export KUBECONFIG=filename.yaml<br/>
    Now connected to the cluster<br/>
-   <img src='./im/kimg5.png' height="80%" width="80%" alt="Disk Sanitization Steps">
-
-
    <img src='./im/kimg4.png' height="80%" width="80%" alt="Disk Sanitization Steps">
 
   <h2>step2</h2>
