@@ -60,12 +60,38 @@
 
 <h2>step3</h2>
 Deploy mongo express which is the UI for mongodb<br/>
+create a mongo express deployment and mongo-express service using a configuration file 
+eg. file ('mongo-exp.yaml')
+set the environmental values for mongo-express
+reference the value of the rootpassword from the secret that is created with the mongodb helm chart
+
   
  <img src='./sp/kimage8.png' height="80%" width="80%" alt="Disk Sanitization Steps">
+
+ <h2>step4</h2>
+ Since mongo-express service is an internal service we need to open it to external so that it can be accessed in the browser
+ this is done using "ingress"
+ 1. deploy ingress controller
+ 2. configure ingress rule
+
+ Use helm chart to deploy ingress controller
+ add the repository of the helm chart
+ eg. helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+ install the helm chart after adding the repo
+ eg. helm install nginx-ingress ingress-nginx/ingress-nginx --set controller-publicService.enable=true
+ to make sure we automatically allocate a public IP address for ingress address to use with nginx we pass in the following command during installation of the chart
+ (--set controller-publicService.enabled=true)
+ A NodeBalancer will be dynamically created in linode as the ingress controller is deployed
+ The NodeBalancer becomes the entry point to the cluster
 
 
   
  <img src='./sp/kimage10.png' height="80%" width="80%" alt="Disk Sanitization Steps">
+
+ <h2>step5</h2>
+Configure Ingress Rule
+Create ingress rule for mongo-express
+with configuration file eg. "helm-ingress.yaml"
 
    
     
